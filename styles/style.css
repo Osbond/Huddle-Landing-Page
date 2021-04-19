@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;500;600&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --violet: hsl(257, 40%, 49%);
+  --lightMagenta: hsl(300, 69%, 71%);
+  font-size: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--violet);
+  background-image: url(../images/bg-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  font-family: "Open Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+
+.main {
+  text-align: center;
+  color: #fff;
+  max-width: 80%;
+  margin: 0 auto;
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+
+.main__img {
+  display: block;
+  max-width: 100%;
+}
+
+.main__header {
+  text-align: left;
+  padding-bottom: 5em;
+}
+
+.main__logo {
+  display: block;
+  width: 10em;
+}
+
+.main__btn {
+  background-color: #fff;
+  color: var(--violet);
+  padding: 1.2em 0;
+  border-radius: 5em;
+  width: 20em;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 0.3em 0.5em 0em hsl(257, 40%, 35%);
+  cursor: pointer;
+}
+
+.main__btn:hover {
+  background-color: var(--lightMagenta);
+}
+
+.main__footer > a {
+  border-radius: 50%;
+  border: 0.01em solid;
+  text-decoration: none;
+  padding: 0.5em;
+  font-size: 1.1rem;
+  margin-right: 1em;
+  display: flex;
+  color: #fff;
+  width: 2em;
+  height: 2em;
+  justify-content: center;
+  align-items: center;
+}
+
+.main__footer > a:hover {
+  color: var(--lightMagenta);
+}
+
+.main__footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main__box {
+  padding-bottom: 5em;
+}
+
+@media (min-width: 900px) {
+  .main__box {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  body {
+    background-image: url(../images/bg-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 80vw 100vh;
+  }
+  .main__logo {
+    width: 13em;
+  }
+  .main__footer {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+  }
+
+  .main {
+    max-width: 90%;
+    text-align: left;
+  }
+
+  .main__btn {
+    text-align: center;
+    margin-left: 0;
+    width: 12em;
+    padding: 0.8em 0;
+  }
+
+  .main__register {
+    flex: 0.8;
+  }
+
+  .main__imgContainer {
+    flex: 1.4;
+    margin-right: 2em;
+  }
+}
